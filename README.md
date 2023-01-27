@@ -61,6 +61,11 @@ animate(
   res = 100
 )
 ```
+
+## Export the animated version of graph on local device
+```R
+anim_save("GDP graph.gif")
+```
 ## Reference images : <br>
 
 <img src="Images/GDP.gif" alt="drawing"/><br><br>
