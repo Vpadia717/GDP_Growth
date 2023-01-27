@@ -1,5 +1,7 @@
 # GDP Growth
 
+<a href="https://posit.co/download/rstudio-desktop" align="center"><br><img src="images/R studio.svg" alt="drawing"/></a>
+
 You need to install **R Studio** from [here](https://posit.co/download/rstudio-desktop/)
 
 Various libraries which we are utlizing are:
