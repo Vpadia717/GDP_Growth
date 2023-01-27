@@ -68,7 +68,7 @@ anim_save("GDP graph.gif")
 ```
 ## Reference images : <br>
 
-<img src="Images/GDP.gif" alt="drawing"/><br><br>
+<img src="Images/GDP.gif" alt="drawing" style="border-radius: 10"/><br><br>
 
 This is the README file for GDP Growth repository. [^1]
 
