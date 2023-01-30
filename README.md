@@ -42,6 +42,12 @@ graph1 = gapminder %>%
   ) +
   scale_color_brewer(palette = "Set2")
 ```
+## Framing the plot in the frame
+
+```R
+graph1
+```
+
 ## Adding animation to the graph
 ```R
 graph1.animation = graph1 +
