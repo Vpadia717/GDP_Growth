@@ -34,6 +34,8 @@ graph1 = gapminder %>%
   ) +
   scale_color_brewer(palette = "Set2")
 
+graph1
+
 graph1.animation = graph1 +
   transition_time(year) +
   labs(subtitle = "Year: {frame_time}") +
