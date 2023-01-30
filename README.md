@@ -48,6 +48,10 @@ graph1 = gapminder %>%
 graph1
 ```
 
+## Output of the plot : <br>
+
+<img src="Images/plot.svg" alt="drawing"/><br><br>
+
 ## Adding animation to the graph
 ```R
 graph1.animation = graph1 +
@@ -74,7 +78,7 @@ anim_save("GDP graph.gif")
 ```
 ## Reference images : <br>
 
-<img src="Images/GDP.gif" alt="drawing" style="border-radius: 10"/><br><br>
+<img src="Images/GDP.gif" alt="drawing"/><br><br>
 
 This is the README file for GDP Growth repository. [^1]
 
