@@ -9,6 +9,7 @@ This code is designed to create an animated graph that shows the relationship be
 Various libraries which we are utlizing are:
 
 ```R
+# Loading necessary libraries and dataset
 library(gganimate)
 library(ggplot2)
 library(dplyr)
@@ -22,33 +23,10 @@ Before running this code, you will need to make sure that you have installed the
 Once you have installed the necessary libraries, you can run the code in your preferred R environment. The code will load the gapminder dataset and create a static graph using ggplot2. It will then create an animated version of this graph using gganimate.
 
 ```R
+# Checking the gapminder dataset
 gapminder
-
-graph1 = gapminder %>%
-  ggplot(aes(
-    x = gdpPercap,
-    y = lifeExp,
-    color = continent,
-    size = pop
-  )) +
-  geom_point(alpha = 0.7, stroke = 0) +
-  theme_fivethirtyeight() +
-  scale_size(range = c(2, 12), guide = "none") +
-  scale_x_log10() +
-  labs(
-    title = "GDP Per Capita by Country",
-    x = "Income per person (GDP / capita)",
-    y = "Life expectancy (years)",
-    color = "Continent",
-    caption = "Source: Vivek Padia"
-  ) +
-  theme(
-    axis.title = element_text(),
-    text = element_text(family = "Rubik"),
-    legend.text = element_text(size = 10)
-  ) +
-  scale_color_brewer(palette = "Set2")
 ```
+
 ## Understanding the Code
 The code first loads the necessary libraries and the gapminder dataset. It then creates a static graph using ggplot2, which displays the relationship between GDP per capita and life expectancy by continent, with the size of each point representing the population of the country. The x-axis is transformed using a log scale to better display the range of GDP per capita values in the data.
 
@@ -63,19 +41,67 @@ graph1
 ## Modifying the Code
 If you would like to modify this code, you can adjust various parameters to customize the appearance and behavior of the graph. For example, you can change the color palette, adjust the size and opacity of the points, or modify the animation parameters to change the speed or duration of the animation.
 
+```R
+# Creating a static graph using ggplot2
+graph1 = gapminder %>%
+  ggplot(aes(
+    x = gdpPercap,
+    y = lifeExp,
+    color = continent,
+    size = pop
+  )) +
+  geom_point(alpha = 0.7, stroke = 0) +
+  
+  # Applying a theme
+  theme_fivethirtyeight() +
+  
+  # Scaling size of points
+  scale_size(range = c(2, 12), guide = "none") +
+  
+  # Applying a log transformation to the x-axis
+  scale_x_log10() +
+  
+  # Adding labels and titles
+  labs(
+    title = "GDP Per Capita by Country",
+    x = "Income per person (GDP / capita)",
+    y = "Life expectancy (years)",
+    color = "Continent",
+    caption = "Source: Vivek Padia"
+  ) +
+  
+  # Customizing the theme
+  theme(
+    axis.title = element_text(),
+    text = element_text(family = "Rubik"),
+    legend.text = element_text(size = 10)
+  ) +
+  
+  # Using a color palette for the continents
+  scale_color_brewer(palette = "Set2")
+```
+
 ## Output of the plot : <br>
 
 <img src="Images/plot.svg" alt="drawing"/><br><br>
 
 ## Adding animation to the graph
 ```R
+# Creating an animated graph using gganimate
 graph1.animation = graph1 +
+  
+  # Adding a transition based on the "year" variable in the dataset
   transition_time(year) +
+  
+  # Adding a subtitle showing the current year
   labs(subtitle = "Year: {frame_time}") +
+  
+  # Adding a shadow effect to improve animation quality
   shadow_wake(wake_length = 0.1)
 ```
 ## Viewing the animation
 ```R
+# Displaying the animated graph using gganimate's animate function
 animate(
   graph1.animation,
   height = 1080,
@@ -89,6 +115,7 @@ animate(
 
 ## Export the animated version of graph on local device
 ```R
+# Saving the resulting animation as a GIF file
 anim_save("GDP graph.gif")
 ```
 ## Reference images : <br>
