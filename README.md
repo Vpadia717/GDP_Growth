@@ -4,6 +4,8 @@
 
 You need to install **R Studio** from [here](https://posit.co/download/rstudio-desktop/)
 
+This code is designed to create an animated graph that shows the relationship between GDP per capita and life expectancy over time, using data from the gapminder dataset. The animation highlights changes in these variables by continent and year.
+
 Various libraries which we are utlizing are:
 
 ```R
@@ -13,7 +15,12 @@ library(dplyr)
 library(gapminder)
 library(ggthemes)
 ```
-## Ploting the graph
+
+## Getting Started
+Before running this code, you will need to make sure that you have installed the necessary libraries. This code uses ggplot2, dplyr, gapminder, ggthemes, and gganimate.
+
+Once you have installed the necessary libraries, you can run the code in your preferred R environment. The code will load the gapminder dataset and create a static graph using ggplot2. It will then create an animated version of this graph using gganimate.
+
 ```R
 gapminder
 
