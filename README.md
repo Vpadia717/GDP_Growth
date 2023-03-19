@@ -122,7 +122,7 @@ animate(
 # Saving the resulting animation as a GIF file
 anim_save("GDP graph.gif")
 ```
-## Reference images : <br>
+## Output: <br>
 
 <img src="Images/GDP.gif" alt="drawing"/><br><br>
 
