@@ -1,4 +1,4 @@
-# GDP Growth
+# GDP and Life Expectancy Animation
 
 <a href="https://posit.co/download/rstudio-desktop" align="center"><br><img src="Images/R Studio.svg" alt="drawing"/></a>
 
@@ -49,11 +49,19 @@ graph1 = gapminder %>%
   ) +
   scale_color_brewer(palette = "Set2")
 ```
-## Framing the plot in the frame
+## Understanding the Code
+The code first loads the necessary libraries and the gapminder dataset. It then creates a static graph using ggplot2, which displays the relationship between GDP per capita and life expectancy by continent, with the size of each point representing the population of the country. The x-axis is transformed using a log scale to better display the range of GDP per capita values in the data.
+
+The code then uses gganimate to create an animated version of this graph. The graph is animated based on the "year" variable in the dataset, with each frame of the animation showing the data for a different year. The code also adds a subtitle to the animation to display the current year.
+
+Finally, the code saves the resulting animation as a GIF file.
 
 ```R
 graph1
 ```
+
+## Modifying the Code
+If you would like to modify this code, you can adjust various parameters to customize the appearance and behavior of the graph. For example, you can change the color palette, adjust the size and opacity of the points, or modify the animation parameters to change the speed or duration of the animation.
 
 ## Output of the plot : <br>
 
