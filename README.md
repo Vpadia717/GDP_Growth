@@ -34,10 +34,6 @@ The code then uses gganimate to create an animated version of this graph. The gr
 
 Finally, the code saves the resulting animation as a GIF file.
 
-```R
-graph1
-```
-
 ## Modifying the Code
 If you would like to modify this code, you can adjust various parameters to customize the appearance and behavior of the graph. For example, you can change the color palette, adjust the size and opacity of the points, or modify the animation parameters to change the speed or duration of the animation.
 
@@ -79,6 +75,14 @@ graph1 = gapminder %>%
   
   # Using a color palette for the continents
   scale_color_brewer(palette = "Set2")
+```
+## Acknowledgments
+This code was created by Vivek Padia. The data used in this code comes from the gapminder dataset, and the code was inspired by examples from the ggplot2 and gganimate documentation.
+
+
+```R
+# Displaying the static graph
+graph1
 ```
 
 ## Output of the plot : <br>
